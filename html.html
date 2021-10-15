@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        #input{
+            background: transparent;
+            border: none;
+            -webkit-user-modify: read-only;
+        }
+        #input::selection{
+            background: transparent;
+            color: black;
+        }
+        #input:focus-visible{
+            outline-offset: unset !important;
+            outline: unset !important;
+        }
+        #input:focus-visible,#input:focus{
+            border:none
+        }
+        #execCopy{
+            border: none;
+            background: transparent;
+            cursor: pointer;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <input id="input" type="text" value="kkka2a" readonly/>
+<button id="execCopy"> <img src="https://img.icons8.com/ios/25/000000/copy.png"/> </button>
+    <script>
+        document.getElementById('execCopy').addEventListener('click', execCopy);
+function execCopy() {
+  document.querySelector("#input").select();
+  document.execCommand("copy");
+}
+    </script>
+</body>
+</html>
