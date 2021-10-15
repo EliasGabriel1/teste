@@ -1,0 +1,21 @@
+#input{
+    background: transparent;
+    border: none;
+    -webkit-user-modify: read-only;
+}
+#input::selection{
+    background: transparent;
+    color: black;
+}
+#input:focus-visible{
+    outline-offset: unset !important;
+    outline: unset !important;
+}
+#input:focus-visible,#input:focus{
+    border:none
+}
+#execCopy{
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
